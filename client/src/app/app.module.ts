@@ -10,12 +10,17 @@ import { UserModule } from './user/user.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
+import { CareersComponent } from './careers/careers.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PlansScheduleComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
