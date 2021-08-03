@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a> -->
+            <a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
+            <ul class="navbar-nav ml-auto " *ngIf="isLogged">
+                <li class="nav-item user">
+                    <a class="action" routerLink="/plans-pricing">Plans & Pricing</a>
+                </li>
+                <li>
+                    <a class="action" routerLink="/booklesson">Book a Lesson</a>
+                </li>
+                <li>
+                    <a class="action" routerLink="/courses">Courses</a>
+                </li>
+                <li>
+                    <a class="action" routerLink="/careers">Careers</a>
+                </li>
+                <li>
+                    <a (click)="logoutHandler()" class="action"><i class='fas fa-sign-out-alt'></i> Log out</a>
+                </li>
+                <!-- <li>
+                <a class="action" href="#">Apply now</a>
+            </li> -->
+            </ul>
+            <ul class="navbar-nav ml-auto " *ngIf="!isLogged">
+                <li class="nav-item user">
+                    <a class="action" routerLink="/plans-pricing">Plans & Pricing</a>
+                </li>
+                <li>
+                    <a class="action" routerLink="/user/register">Register</a>
+                </li>
+                <li>
+                    <a class="action" routerLink="/user/login"><i class="fas fa-sign-in-alt"></i> Log in</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>

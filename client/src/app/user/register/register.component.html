@@ -1,0 +1,56 @@
+<!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'> -->
+<a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
+<form [formGroup]="form" class="register" action="" method="post" (ngSubmit)="submitHandler()">
+    <!-- <fieldset> -->
+
+    <div class="register">
+        <div class="register-header">
+            <h1>Register</h1>
+        </div>
+        <div class="register-form ">
+            <h3>Username:</h3>
+            <input type="text" name="username" formControlName="username" placeholder="Username" /><br>
+            <ng-container *ngIf="form.get('username')?.touched">
+                <p *ngIf="form.get('username')?.errors?.required" class="error">
+                    Username is required!
+                </p>
+                <p *ngIf="form.get('username')?.errors?.minlength" class="error">
+                    Username should be at least 5 charecters long!
+                </p>
+            </ng-container>
+            <h3>Password:</h3>
+            <input type="password" name="password" formControlName="password" placeholder="Password" />
+            <ng-container *ngIf="form.get('password')?.touched">
+                <p *ngIf="form.get('password')?.errors?.required" class="error">
+                    Password is required!
+                </p>
+                <p *ngIf="form.get('password')?.errors?.minlength" class="error">
+                    Password must be at least 5 characters!
+                </p>
+            </ng-container>
+            <h3>Repeat Password:</h3>
+            <input type="password" name="rePassword" formControlName="rePassword" placeholder="Password" />
+            <ng-container *ngIf="form.get('rePassword')?.touched">
+                <p *ngIf="form.get('rePassword')?.errors?.required" class="error">
+                    Repeat Password is required!
+                </p>
+                <p *ngIf="form.get('rePassword')?.errors?.sameValue" class="error">
+                    Passwords don't match!
+                </p>
+            </ng-container>
+            <br>
+            <button>Register</button>
+        </div>
+    </div>
+    <!-- </fieldset> -->
+</form>
+
+
+
+
+
+<!-- <div class="wrapper">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    <form [formGroup]="form" class="register" (ngSubmit)="submitHandler()">
+    </form>
+</div> -->

@@ -1,0 +1,16 @@
+<div *ngIf="courses">
+    <section class="courses">
+        <h2 class="course-title">Select your Language Now and get discount!</h2>
+        <article class="course" *ngFor="let course of courses">
+            <a href="#">
+                <p class="course-name">{{course.language}}</p>
+                <img src={{course.imageUrl}} alt="chinese-img">
+            </a>
+
+        </article>
+    </section>
+</div>
+
+<div *ngIf="!courses"> <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</div>

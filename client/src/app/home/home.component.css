@@ -1,0 +1,81 @@
+@import url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+main {
+    background-image: url('../../assets/images/Background.jpg');
+    background-repeat: no-repeat;
+    background-size: 1500px 600px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* main {
+    min-height: 91vh;
+} */
+
+.home p {
+    text-align: left;
+    color: white;
+}
+
+.home p.lead {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.home-logo {
+    color: rgb(180, 147, 168);
+    font-size: xxx-large;
+}
+
+.home-logo-wrap {
+    font-family: 'Festive', cursive;
+    margin: 0.5em 0;
+}
+
+.logo {
+    color: rgb(83, 77, 81);
+    font-size: x-large;
+}
+
+.action {
+    display: inline-block;
+    background-color: rgb(180, 147, 168);
+    padding: 20px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.action:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+div {
+    box-sizing: border-box;
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .collapse.navbar-collapse {
+        display: inline-block;
+    }
+    .navbar>.container {
+        flex-wrap: nowrap!important;
+    }
+    ul.navbar-nav {
+        margin: auto;
+        flex-direction: row;
+    }
+    .navbar-nav li {
+        padding-left: 20px;
+    }
+}

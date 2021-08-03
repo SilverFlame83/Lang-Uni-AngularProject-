@@ -1,0 +1,53 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
+#container {
+    display: flex;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.action {
+    display: inline-block;
+    background-color: rgb(180, 147, 168);
+    padding: 20px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.action:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+#header-bar .region-header-bar {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+#header-bar {
+    width: 100%;
+    border-bottom: 1px solid #b173a2;
+    height: 50px;
+    background-color: rgb(180, 147, 168);
+    line-height: normal;
+}
+
+.home-logo {
+    color: rgb(180, 147, 168);
+    font-size: xxx-large;
+}
+
+.home-logo-wrap {
+    font-family: 'Festive', cursive;
+    margin: 0.5em 0;
+}
+
+a {
+    text-decoration: none;
+}

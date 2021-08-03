@@ -1,0 +1,39 @@
+<a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
+<div class="wrapper">
+    <form #f="ngForm" class="login" (ngSubmit)="submitFormHandler(f.value)">
+
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+
+        <div class="login">
+            <div class="login-header">
+                <h1>Login</h1>
+            </div>
+            <div class="login-form">
+                <h3>Username:</h3>
+                <input #userUsername="ngModel" type="text" name="username" placeholder="Username" ngModel required minlength="5"><br>
+                <p *ngIf="userUsername.touched && userUsername.errors?.required" class="error">
+                    Username is required!
+                </p>
+                <p *ngIf="userUsername.touched && userUsername.errors?.minlength" class="error">
+                    Username name must be at least 5 characters long!
+                </p>
+                <h3>Password:</h3>
+                <input #userPassword="ngModel" type="password" name="password" placeholder="******" ngModel required minlength="4">
+                <p class="error" *ngIf="userPassword.touched && userPassword.errors?.required">
+                    Password is required!
+                </p>
+                <p class="error" *ngIf="userPassword.touched && userPassword.errors?.minlength">
+                    Password must be at least 4 characters!!
+                </p>
+                <br>
+                <button [disabled]="f.invalid" class="login-button">Log in</button>
+                <app-loader [isLoading]="isLoading"></app-loader>
+                <p class="text-center">
+                    Have an account?
+                    <a routerLink="/user/register">Register</a>
+                </p>
+            </div>
+        </div>
+
+    </form>
+</div>
