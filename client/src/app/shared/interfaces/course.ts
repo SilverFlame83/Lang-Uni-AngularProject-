@@ -1,7 +1,7 @@
 export interface ICourse{
     _id: string,
     createdBy: [ ],
-    language: string,
+    level: string,
     price: number,
     imageUrl: string,
     startsOn: string,

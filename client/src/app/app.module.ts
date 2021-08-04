@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
 import { CareersComponent } from './careers/careers.component';
+import { LevelService } from './plans-schedule/level.service';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CareersComponent } from './careers/careers.component';
     AppRoutingModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    LevelService
   ],
   bootstrap: [AppComponent]
 })
