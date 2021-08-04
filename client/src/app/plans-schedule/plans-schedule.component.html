@@ -1,64 +1,23 @@
 <legend>
     Choose Your Level</legend>
 <a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
-
-<div class="container">
+<div *ngIf="levels"></div>
+<div class="container" *ngFor="let level of levels">
     <div class="profile">
-        <h3>BEGGINER:</h3>
+        <h3>{{level.language}}</h3>
         <div class="flex">
-            <p>Subject: Simple everyday conversations</p>
+            <p>{{level.text}}</p>
         </div>
         <div>
-            <h4>Explore the basics with this introductory course</h4>
+            <h4>Explore the world with our lessons</h4>
         </div>
         <div>
-            <p>Starts on 23.08.21 at 10:00</p>
+            <p>{{level.starts}}</p>
         </div>
         <button class="button"><span>SELECT </span></button>
-        <p>Course lasts 3 months</p>
+        <p>{{level.sessions}}</p>
         <p>3 individual sessions</p>
         <p>Online resources</p>
+        <p>Weekly newsletter</p>
     </div>
 </div>
-<div class="container">
-    <div class="container">
-        <div class="profile">
-            <h3>ELEMENTARY</h3>
-            <div class="flex">
-                <p>Subject: Frequently used expressions related to areas of most immediate relevance</p>
-            </div>
-            <div>
-                <p>Every week twice</p>
-                <h4>Starts on 03.09.21 at 10:00</h4>
-            </div>
-            <div>
-                <p>Valid for 12 months</p>
-            </div>
-            <button class="button"><span>SELECT </span></button>
-            <p>Course lasts 3 months</p>
-            <p>3 individual sessions</p>
-            <p>Online resources</p>
-            <p>Weekly newsletter</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="container">
-            <div class="profile">
-                <h3>INTERMEDIATE</h3>
-                <div class="flex">
-                    <p>Subject: Main points of clear standard input on familiar matters regularly encountered in work, school, leisure</p>
-                </div>
-                <div>
-                    <p>Once a week</p>
-                    <h4>Unlimited access to professional content and resources</h4>
-                </div>
-
-                <button class="button"><span>SELECT </span></button>
-                <p>Course lasts 6 months</p>
-                <p>5 individual sessions</p>
-                <p>Online resources</p>
-                <p>Weekly newsletter</p>
-                <p>Priority support</p>
-            </div>
-        </div>
-        <div class="container">
