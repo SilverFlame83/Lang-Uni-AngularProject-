@@ -14,10 +14,11 @@
         <div>
             <p>{{level.starts}}</p>
         </div>
-        <button class="button"><span>SELECT </span></button>
+        <a class="button" routerLink="/teachers"><span>SELECT </span></a>
+        <br>
         <p>{{level.sessions}}</p>
-        <p>3 individual sessions</p>
         <p>Online resources</p>
         <p>Weekly newsletter</p>
     </div>
 </div>
+<div *ngIf="!levels">Sorry we do not have any planned lessons</div>

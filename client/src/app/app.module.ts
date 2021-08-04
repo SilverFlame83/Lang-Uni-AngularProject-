@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
 import { CareersComponent } from './careers/careers.component';
 import { LevelService } from './plans-schedule/level.service';
+import { TeachersComponent } from './teachers/teachers.component';
+import { TeacherService } from './teachers/teacher.service';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { LevelService } from './plans-schedule/level.service';
     HomeComponent,
     NotFoundComponent,
     PlansScheduleComponent,
-    CareersComponent
+    CareersComponent,
+    TeachersComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { LevelService } from './plans-schedule/level.service';
   ],
   providers: [
     CoursesService,
-    LevelService
+    LevelService,
+    TeacherService
   ],
   bootstrap: [AppComponent]
 })

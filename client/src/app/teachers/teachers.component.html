@@ -1,0 +1,23 @@
+<div *ngIf="teachers">
+    <h1>Board of Teachers</h1>
+    <div class="row">
+        <div class="column" *ngFor="let teacher of teachers">
+            <div class="card">
+                <article class="course">
+                    <h3>{{teacher.name}}</h3>
+                    <img src={{teacher.image}} alt="teacher-img">
+                    <p>{{teacher.info}}</p>
+                    <h3>Contacts:</h3>
+                    <p>Phone Number:{{teacher.phone}}</p>
+                    <p>email:{{teacher.email}}</p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <a class="button" routerLink="/home">Back</a>
+</div>
+<div *ngIf="!teachers">
+    <h1>Sorry the board is empty be the firs one.</h1>
+    <h3>If you are motivated and love teaching you can applay to be a part of our team</h3>
+    <a class="button" routerLink="/careers">Applay</a>
+</div>
