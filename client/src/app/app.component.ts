@@ -10,8 +10,14 @@ export class AppComponent {
   title = 'lang-uni';
 
   get isAuthentic(): boolean{
-    return this.userService.currentUser === undefined;
+    return this.userService.user === undefined;
   }
 
-  constructor (private userService: UserService){}
+  constructor (private userService: UserService){
+    this.userService.getUserInfo().subscribe({
+      error:()=>{
+        this.userService.user = null;
+      }
+    })
+  }
 }
