@@ -2,11 +2,7 @@ const router = require('express').Router();
 const { isUser } = require('../middlewares/guards');
 const { getAllCourses, getCourseById } = require('../services/courseServices');
 
-//Delete it
-router.get('/create', (req, res) => {
-    res.render('create')
-});
-//
+
 
 router.get('/', async(req, res) => {
     try {
