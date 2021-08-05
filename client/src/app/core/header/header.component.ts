@@ -26,7 +26,7 @@ export class HeaderComponent{
 
   logoutHandler():void{
     this.userService.logout().subscribe(()=>{
-    this.router.navigateByUrl('/user/login');
+    this.router.navigateByUrl('/user/register');
     });
   }
 
