@@ -1,0 +1,18 @@
+<section id="viewAddhotel">
+    <h2>Edit existing course</h2>
+    <form id="formAddhotel" action="/courses/edit/610302d5f041bb37b0ca4bac" method="POST">
+        <label for="language">Language:</label>
+        <input type="text"  name="language" value="{{course.language}}">
+        <label for="price">Price:</label>
+        <input type="number" name="price" value="{{course.price}}">
+        <label for="price">Starts On:</label>
+        <input type="number" name="starts" value="{{course.startsOn}}">
+        <label for="imgUrl">Image:</label>
+        <input type="text" id="imgUrl" name="imageUrl"
+            value="{{course.imageUrl}}">
+     <label for="owner">Owner:</label>
+        <input type="text"  name="owner" value="{{course.owner}}">
+
+        <input type="submit" class="create" value="Edit">
+    </form>
+</section>

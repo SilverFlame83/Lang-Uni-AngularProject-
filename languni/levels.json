@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "6109c651d31ee6228440a880"
+  },
+  "language": "Chinese: BEGGINER",
+  "text": "Subject: Simple everyday conversations",
+  "starts": "Starts on 23.08.21 at 10:00",
+  "sessions": "3 individual sessions",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6109c6b1d31ee6228440a883"
+  },
+  "language": "Italian: ELEMENTARY",
+  "text": "Subject: Frequently used expressions related to areas of most immediate relevance",
+  "starts": "Starts on 03.09.21 at 10:00",
+  "sessions": "3 individual sessions",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6109c70ed31ee6228440a886"
+  },
+  "language": "French: INTERMEDIATE",
+  "text": "Subject: Main points of clear standard input on familiar matters regularly encountered in work, school, leisure",
+  "starts": "Starts on 15.09.21 at 10:00",
+  "sessions": "5 individual sessions",
+  "__v": 0
+}]

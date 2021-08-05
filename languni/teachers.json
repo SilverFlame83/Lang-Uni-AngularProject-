@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "610aef27992e313fcccb1661"
+  },
+  "name": "Anna Tompson",
+  "email": "ana@tompson.gmail",
+  "address": "Gate str",
+  "city": "London",
+  "phone": "0898746578",
+  "birth": "21.02.1978",
+  "__v": 0,
+  "image": "https://static.jobscan.co/blog/uploads/jobs-for-former-teachers.png",
+  "info ": "English teacher.Skilled and enthusiastic with key experience instructing students in English grammar. More than 10 years experience.",
+  "info": "English teacher. More than 7 years in teaching field. Having university degree in foreign languages. Skilled and well prepared."
+},{
+  "_id": {
+    "$oid": "610af030992e313fcccb1667"
+  },
+  "name": "Gabriel Alonso",
+  "email": "gabriel@alonso",
+  "address": "Querétaro",
+  "city": "Mexico city",
+  "phone": "442.218-6485/442.218-6590",
+  "birth": "10/8/1987",
+  "__v": 0,
+  "image": "https://st.depositphotos.com/1177973/3818/i/950/depositphotos_38186743-stock-photo-young-teacher-near-chalkboard-in.jpg",
+  "info": "Chinese teacher. Having Bachelor's degree in Chinese Languge as well as current California teaching credentials. more than 5 years experience."
+},{
+  "_id": {
+    "$oid": "610af140992e313fcccb166a"
+  },
+  "name": "Bryant G Forrest",
+  "email": "bryant_forest.gmail",
+  "address": "305 Royal Avenue",
+  "city": "New Westminster",
+  "phone": "778-865-0184",
+  "birth": "5/26/1990",
+  "__v": 0,
+  "image": "https://publications.ieu.asn.au/files/app_content/2020-june-ie/articles2/files/8499_1456_0_P.jpg",
+  "info": "Spanish teacher. Creating individualized plans and programs to facilitate a targeted, personalized approach to education.Experienced in teachin wide range students."
+},{
+  "_id": {
+    "$oid": "610af1eb992e313fcccb166d"
+  },
+  "name": "Alice H McMorrow",
+  "email": "aliceMc@Morrow.gmail",
+  "address": "2811 Church Street",
+  "city": "Tignish",
+  "phone": "902-882-7469",
+  "birth": "9/2/1992",
+  "__v": 0,
+  "image": "https://d2v9ipibika81v.cloudfront.net/uploads/sites/256/teacher-f-1.jpg",
+  "info": "German teacher:Creating individualized plans and programs to facilitate a targeted, personalized approach to education while stimulating students’enjoyment and appreciation for Germany and the German culture."
+}]
