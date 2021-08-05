@@ -3,12 +3,6 @@ const { isUser } = require('../middlewares/guards');
 const { getAllTeachers, getTeacherById } = require('../services/teacherServices');
 
 
-//Delete it
-router.get('/add', (req, res) => {
-    res.render('teacherCreate')
-});
-//
-
 router.get('/', async(req, res) => {
     try {
         const teachers = await getAllTeachers();
