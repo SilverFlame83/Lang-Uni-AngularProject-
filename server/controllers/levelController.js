@@ -3,12 +3,6 @@ const { isUser } = require('../middlewares/guards');
 const { getAllLevels, getLevelById } = require('../services/levelServices');
 
 
-//Delete it
-router.get('/add', (req, res) => {
-    res.render('levelCreate')
-});
-//
-
 router.get('/', async(req, res) => {
     try {
         const levels = await getAllLevels();
