@@ -4,11 +4,6 @@ const { getAllUsers } = require('../services/userServices')
 
 const { isGuest, isUser } = require('../middlewares/guards');
 
-//Delete it!!!
-// router.get('/register', isGuest(), (req, res) => {
-//     res.render('register');
-// });
-//
 router.post('/register', isGuest(),
 
     async(req, res) => {
@@ -27,10 +22,7 @@ router.post('/register', isGuest(),
         }
 
     });
-//Delete it!!!
-// router.get('/login', isGuest(), (req, res) => {
-//     res.render('login');
-// });
+
 router.get('/users', async(req, res) => {
     try {
         const users = await getAllUsers();
