@@ -7,21 +7,3 @@ module.exports = () => (req, res, next) => {
     next();
 };
 
-// const level = require('../services/levelServices');
-
-// module.exports = () => (req, res, next) => {
-//     req.storage = {
-//         ...level
-//     }
-//     next();
-// };
-
-
-// const course = require('../services/courseServices');
-
-// module.exports = () => (req, res, next) => {
-//     req.storage = {
-//         ...course
-//     }
-//     next();
-// };
