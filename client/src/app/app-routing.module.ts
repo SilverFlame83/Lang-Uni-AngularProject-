@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CareersComponent } from './careers/careers.component';
+import { CareersComponent } from './user/careers/careers.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';

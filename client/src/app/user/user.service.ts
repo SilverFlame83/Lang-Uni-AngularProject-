@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { IUser } from '../shared/interfaces';
+import { ITeacher, IUser } from '../shared/interfaces';
 import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -37,13 +37,23 @@ export class UserService {
       tap((user)=>this.user = user)
     )
   }
+  
+  apply(data:{
+    name:string;
+    email: string;
+    address:string;
+    city:string;
+    image: string; 
+    phone:string; 
+    bdate:string}){
+      return this.http.post<ITeacher>(`http://localhost:3000/teachers/add`, data)
+  }
+  
 
     logout(): Observable<any> {
-      return this.http.get(`${apiUrl}/logout`, { withCredentials: true });
-    }
-    // return this.http.post<IUser>(`${apiUrl}/logout`, {}, { withCredentials: true }).pipe(
-    //   tap(() => this.user = null)
-    // );
+      return this.http.get(`${apiUrl}/logout`, { withCredentials: true }).pipe(
+        tap(() => this.user = null)
+      )}
   
 
 }

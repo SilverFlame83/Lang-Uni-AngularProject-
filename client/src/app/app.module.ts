@@ -11,7 +11,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
-import { CareersComponent } from './careers/careers.component';
 import { LevelService } from './plans-schedule/level.service';
 import { TeachersComponent } from './teachers/teachers.component';
 import { TeacherService } from './teachers/teacher.service';
@@ -23,7 +22,6 @@ import { TeacherService } from './teachers/teacher.service';
     HomeComponent,
     NotFoundComponent,
     PlansScheduleComponent,
-    CareersComponent,
     TeachersComponent
   ],
   imports: [

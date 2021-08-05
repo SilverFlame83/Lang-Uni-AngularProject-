@@ -1,0 +1,63 @@
+<body>
+    <div class="testbox">
+        <form #form="ngForm" action="" method="" (ngSubmit)="apply(form)">
+            <div class="banner">
+                <h1>Come Work Wih Us</h1>
+            </div>
+            <div class="item">
+                <label for="name">Name<span>*</span></label>
+                <input #nameInput="ngModel" ngModel id="name" type="text" name="name" required>
+                <p *ngIf="nameInput.touched && nameInput.errors?.required" class="error">
+                    Name is required!
+                </p>
+            </div>
+            <div class="item">
+                <label for="email">Email Address<span>*</span></label>
+                <input #emailInput="ngModel" ngModel id="email" type="email" name="email" required email>
+                <p *ngIf="emailInput.touched && emailInput.errors?.required" class="error">
+                    Email is required!
+                </p>
+            </div>
+            <div class="item">
+                <label for="address">Address<span>*</span></label>
+                <input #addressInput="ngModel" ngModel id="address" type="address" name="address" required>
+                <p *ngIf="addressInput.touched && addressInput.errors?.required" class="error">
+                    Address is required!
+                </p>
+            </div>
+            <div class="item">
+                <label for="city">City<span>*</span></label>
+                <input #cityInput="ngModel" ngModel id="city" type="text" name="city" required>
+                <p *ngIf="cityInput.touched && cityInput.errors?.required" class="error">
+                    City is required!
+                </p>
+            </div>
+            <div class="item">
+                <label for="image">Image</label>
+                <input #imageInput="ngModel" ngModel type="text" name="image">
+            </div>
+            <div class="item">
+                <label for="phone">Phone<span>*</span></label>
+                <input #phoneInput="ngModel" ngModel id="phone" type="number" name="phone" required/>
+                <p *ngIf="phoneInput.touched && phoneInput.errors?.required" class="error">
+                    Phone is required!
+                </p>
+            </div>
+            <div class="item">
+                <label for="bdate">Date of Birth<span>*</span></label>
+                <input #birthInput="ngModel" ngModel id="bdate" type="date" name="bdate" required/>
+                <i class="fas fa-calendar-alt"></i>
+                <p *ngIf="birthInput.touched && birthInput.errors?.required" class="error">
+                    Date of birth is required!
+                </p>
+            </div>
+            <label for="avatar">Upload your resume:</label>
+
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            <div class="btn-block">
+                <button routerLink="/" type="submit">SUBMIT</button>
+            </div>
+            <p>If you've changed your mind you can go back <a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a></p>
+        </form>
+    </div>
+</body>

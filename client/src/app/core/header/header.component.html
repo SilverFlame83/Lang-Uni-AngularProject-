@@ -3,15 +3,9 @@
         <div class="container">
             <!-- <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a> -->
             <a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
-            <ul class="navbar-nav ml-auto " *ngIf="isLogged">
+            <ul class="navbar-nav ml-auto " *ngIf="!isLogged">
                 <li class="nav-item user">
                     <a class="action" routerLink="/plans">Plans&Schedule</a>
-                </li>
-                <!-- <li>
-                    <a class="action" routerLink="/booklesson">Book a Lesson</a>
-                </li> -->
-                <li>
-                    <a class="action" routerLink="/courses">Courses</a>
                 </li>
                 <li>
                     <a class="action" routerLink="/careers">Careers</a>
@@ -23,10 +17,10 @@
                 <a class="action" href="#">Apply now</a>
             </li> -->
             </ul>
-            <ul class="navbar-nav ml-auto " *ngIf="!isLogged">
-                <li class="nav-item user">
+            <ul class="navbar-nav ml-auto " *ngIf="isLogged">
+                <!-- <li class="nav-item user">
                     <a class="action" routerLink="/plans">Plans&Schedule</a>
-                </li>
+                </li> -->
                 <li>
                     <a class="action" routerLink="/user/register">Register</a>
                 </li>

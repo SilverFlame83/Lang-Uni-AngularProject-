@@ -6,6 +6,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserService } from './user.service';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CareersComponent } from './careers/careers.component';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CareersComponent
   ],
   imports: [
     CommonModule,
