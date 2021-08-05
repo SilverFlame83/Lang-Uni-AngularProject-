@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -7,31 +8,31 @@ import { UserService } from '../user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css', '../../../form-style.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
   isLoading = false;
   errorMessage = '';
 
   constructor(
+    private activatedRoute: ActivatedRoute,
     private userService: UserService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-  }
 
 
-  submitFormHandler(value:{username: string, password: string}): void {
-  
-    this.isLoading = true;
-    this.errorMessage = '';
-    
-    this.userService.login(value).subscribe(()=>{
-      this.isLoading = false;
-      this.router.navigate(['/']);
-    }, (err)=>{
-      this.errorMessage = 'ERROR!';
-      this.isLoading = false;
+
+  login(form: NgForm): void {
+    if (form.invalid) { return; }
+    const { username, password } = form.value;
+    this.userService.login({ username, password }).subscribe({
+      next: () => {
+        const redirectUrl = this.activatedRoute.snapshot.queryParams.redirectUrl || '/';
+        this.router.navigate([redirectUrl]);
+      },
+      error: (err) => {
+        console.log(err);
+      }
     });
   }
 

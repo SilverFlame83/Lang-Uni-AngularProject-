@@ -12,13 +12,17 @@ export class HeaderComponent{
     return this.userService.isLogged;
   }
 
+  get username(): string {
+    return this.userService.user?.username || '';
+  }
+  
   constructor(
     public userService: UserService,
     private router: Router) { }
 
-  loginHandler(data:any):void{
-    this.userService.login(data);
-  }
+  // loginHandler(data:any):void{
+  //   this.userService.login(data);
+  // }
 
   logoutHandler():void{
     this.userService.logout().subscribe(()=>{

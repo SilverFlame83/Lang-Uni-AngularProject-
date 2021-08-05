@@ -1,6 +1,6 @@
 <a routerLink="/home" class="home-logo-wrap"><span class="home-logo">Lang</span><span class="logo">@</span><span class="home-logo">Uni</span></a>
 <div class="wrapper">
-    <form #f="ngForm" class="login" (ngSubmit)="submitFormHandler(f.value)">
+    <form #form="ngForm" class="login" (ngSubmit)="login(form)">
 
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
@@ -26,10 +26,10 @@
                     Password must be at least 4 characters!!
                 </p>
                 <br>
-                <button [disabled]="f.invalid" class="login-button">Log in</button>
+                <button [disabled]="form.invalid" class="login-button">Log in</button>
                 <app-loader [isLoading]="isLoading"></app-loader>
                 <p class="text-center">
-                    Have an account?
+                    Haven't got an acount?
                     <a routerLink="/user/register">Register</a>
                 </p>
             </div>

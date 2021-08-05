@@ -13,7 +13,7 @@ const routes: Routes = [
         component: LoginComponent,
         canActivate:  [AuthActivate],
         data: {
-          authenticationRequired: false,
+          authenticationRequired: true,
           authenticationFailureRedirectUrl: '/',
         }
       },
