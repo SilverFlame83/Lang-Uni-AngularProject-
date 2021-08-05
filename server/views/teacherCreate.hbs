@@ -1,0 +1,22 @@
+<section id="viewAddhotel">
+    <h2>Add new teacher</h2>
+    <form action="/teachers/add" method="POST" id="formAddhotel">
+        <label for="level">Level name:</label>
+        <input type="text"  name="name" placeholder="name" value="{{teacherData.name}}">
+        <label for="level">email:</label>
+        <input type="text"  name="email" placeholder="emali" value="{{teacherData.email}}">
+         <label for="level">address:</label>
+        <input type="text"  name="address" placeholder="address" value="{{teacherData.address}}">
+          <label for="level">city:</label>
+        <input type="text"  name="city" placeholder="city" value="{{teacherData.city}}">  
+     <label for="level">Image:</label>
+        <input type="text"  name="image" placeholder="img" value="{{teacherData.image}}">
+             <label for="level">Phone:</label>
+        <input type="text"  name="phone" placeholder="phone" value="{{teacherData.phone}}">
+             <label for="level">birth:</label>
+        <input type="text"  name="birth" placeholder="birth" value="{{teacherData.birth}}">
+             <label for="level">Rescources:</label>
+        <input type="text"  name="resources" placeholder="resources" value="{{teacherData.resources}}">
+        <input type="submit" class="create" value="Add">
+    </form>
+</section> 

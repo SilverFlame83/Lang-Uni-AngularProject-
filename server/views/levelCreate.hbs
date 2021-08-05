@@ -1,0 +1,17 @@
+<section id="viewAddhotel">
+    <h2>Add new course</h2>
+    <form action="/levels/add" method="POST" id="formAddhotel">
+        <label for="level">Level name:</label>
+        <input type="text"  name="language" placeholder="Language" value="{{levelData.language}}">
+        <label for="level">Text:</label>
+        <input type="text"  name="text" placeholder="text" value="{{levelData.text}}">
+         <label for="level">Starts:</label>
+        <input type="text"  name="starts" placeholder="starts" value="{{levelData.starts}}">
+          <label for="level">Duration:</label>
+        <input type="text"  name="duration" placeholder="starts" value="{{levelData.duration}}">  
+        <label for="level">Sessions:</label>
+        <input type="text"  name="sessions" placeholder="starts" value="{{levelData.sessions}}">
+
+        <input type="submit" class="create" value="Add">
+    </form>
+</section>

@@ -1,0 +1,17 @@
+<section id="viewAddhotel">
+    <h2>Add new course</h2>
+    <form action="/courses/create" method="POST" id="formAddhotel">
+        <label for="course">Course name:</label>
+        <input type="text"  name="language" placeholder="Language" value="{{courseData.language}}">
+        <label for="starts-on">Price:</label>
+        <input type="number" name="price" placeholder="price"value="{{courseData.price}}">
+        <label for="price">Starts on:</label>
+        <input type="date" name="startsOn" placeholder="startsOn" value="{{courseData.startsOn}}">
+        <label for="imgUrl">Image:</label>
+        <input type="text" id="imgUrl" name="imageUrl" placeholder="https://" value="{{courseData.imageUrl}}">
+         <label for="owner">Owner:</label>
+        <input type="text"  name="owner" value="{{course.owner}}">
+
+        <input type="submit" class="create" value="Add">
+    </form>
+</section>
