@@ -20,10 +20,10 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent,
-        data: {
-          authenticationRequired: false,
-          authenticationFailureRedirectUrl: '/',
-        }
+        // data: {
+        //   authenticationRequired: false,
+        //   authenticationFailureRedirectUrl: '/',
+        // }
       }
     ]
   }

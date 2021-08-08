@@ -10,6 +10,7 @@ import { ICourse } from 'src/app/shared/interfaces';
 export class HomeCoursesComponent {
 
   courses: ICourse[] | undefined;
+  
 
   constructor(private courseService: CoursesService) { 
     this.fetchCourses();

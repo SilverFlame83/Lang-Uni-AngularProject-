@@ -14,6 +14,7 @@ import { PlansScheduleComponent } from './plans-schedule/plans-schedule.componen
 import { LevelService } from './plans-schedule/level.service';
 import { TeachersComponent } from './teachers/teachers.component';
 import { TeacherService } from './teachers/teacher.service';
+import { QuizModule } from './quiz/quiz.module';
 
 
 @NgModule({
@@ -28,8 +29,8 @@ import { TeacherService } from './teachers/teacher.service';
     BrowserModule,
     CoreModule,
     UserModule ,
-    CoreModule,
     SharedModule,
+    QuizModule,
     HttpClientModule,
     AppRoutingModule
   ],

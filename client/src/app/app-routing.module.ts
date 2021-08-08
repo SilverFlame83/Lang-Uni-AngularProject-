@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
 import { TeachersComponent } from './teachers/teachers.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,9 @@ const routes: Routes = [
   {
     path:'careers',
     component: CareersComponent
+  },{
+    path:'quizes',
+    component: QuizComponent
   },
   {
     path:'teachers',

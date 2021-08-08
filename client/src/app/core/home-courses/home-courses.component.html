@@ -2,6 +2,7 @@
     <section class="courses">
         <h2 class="course-title">Select your Language Now and get discount!</h2>
         <article class="course" *ngFor="let course of courses">
+
             <a routerLink="/teachers">
                 <p class=" course-name ">{{course.level}}</p>
                 <img src={{course.imageUrl}} alt="chinese-img ">

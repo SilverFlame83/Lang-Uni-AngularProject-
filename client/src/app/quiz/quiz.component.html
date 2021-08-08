@@ -1,0 +1,50 @@
+<!-- <div *ngIf="!quizOver">
+    <app-questions [questionIndex]="currentIndex" (answers)="receiveAnswers($event)" (totalQuestions)="getTotalQuestions($event)">
+    </app-questions>
+    <br>
+    <button class="btn btn-outline-primary" (click)="goPrevious()">Previous</button> |
+    <button class="btn btn-outline-success" (click)="goNext()">Next</button>
+</div>
+
+<div *ngIf="quizOver" class="border">
+    <h4>Quiz is Over!</h4>
+    Your score is {{score}} / {{totalQuestions}}
+    <br>
+    <button (click)="restartQuiz()">Retake Quiz</button>
+</div> -->
+<legend>
+    <h1>Don't know your level? You can do the quiz and found out!</h1>
+</legend>
+<div class="container" *ngIf="!quizOver">
+    <div class="profile">
+        <app-questions [questionIndex]="currentIndex" (answers)="receiveAnswers($event)" (totalQuestions)="getTotalQuestions($event)">
+        </app-questions>
+        <br>
+        <button class="button" (click)="goPrevious()">Previous</button>
+        <button class="button" (click)="goNext()">Next</button>
+    </div>
+
+</div>
+<div class="container" *ngIf="quizOver" class="border">
+    <div class="profile">
+        <h4>Quiz is Over!</h4>
+        <div *ngIf="score<5">
+            <h3>Your level is: BEGGINER</h3>
+            <p> Your score is {{score}} / {{totalQuestions}}</p>
+        </div>
+        <div *ngIf="score>=5 && score<10">
+            <h3>Well Done! Your level is: ELLEMENTARY</h3>
+            <p> Your score is {{score}} / {{totalQuestions}}</p>
+        </div>
+        <div *ngIf="score>=10 && score<15">
+            <h3>Congrats! Your level is: PRE-INTERMIDIATE</h3>
+            <p> Your score is {{score}} / {{totalQuestions}}</p>
+        </div>
+        <div *ngIf="score>=15 && score <=20">
+            <h3>Excellent!Your level is: INTERMIDIATE</h3>
+            <p> Your score is {{score}} / {{totalQuestions}}</p>
+        </div>
+        <br>
+        <button class="button" (click)="restartQuiz()">Retake Quiz</button>
+    </div>
+</div>

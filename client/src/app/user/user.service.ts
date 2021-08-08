@@ -14,6 +14,7 @@ export class UserService {
   user: IUser | null | undefined = undefined;
 
   get isLogged(): boolean { return !!this.user; }
+  //isLoggedIn = false;
 
   constructor(private http: HttpClient ,
     public router: Router) {
@@ -24,18 +25,21 @@ export class UserService {
     return this.http.post<IUser>(`${apiUrl}/login`, data, { withCredentials: true }).pipe(
       tap((user)=> this.user = user)
     );
+  
   }
 
   register(data: { username: string, password: string }){
     return this.http.post<IUser>(`${apiUrl}/register`, data, { withCredentials: true }).pipe(
       tap((user) => this.user = user)
     );
+ 
   }
 
   getUserInfo(){
     return this.http.get<IUser>(`${apiUrl}/users`, {withCredentials: true}).pipe(
       tap((user)=>this.user = user)
     )
+   
   }
   
   apply(data:{
@@ -51,10 +55,12 @@ export class UserService {
   
 
     logout(): Observable<any> {
+
       return this.http.get(`${apiUrl}/logout`, { withCredentials: true }).pipe(
         tap(() => this.user = null)
-      )}
-  
+      )
+    }
+ 
 
 }
 
