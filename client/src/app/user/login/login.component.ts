@@ -29,6 +29,7 @@ export class LoginComponent  {
       next: () => {
         const redirectUrl = this.activatedRoute.snapshot.queryParams.redirectUrl || '/';
         this.router.navigate([redirectUrl]);
+        window.location.href = 'http://localhost:4200/home'
       },
       error: (err) => {
         console.log(err);

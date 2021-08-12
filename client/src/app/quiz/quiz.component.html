@@ -12,9 +12,11 @@
     <br>
     <button (click)="restartQuiz()">Retake Quiz</button>
 </div> -->
+
 <legend>
     <h1>Don't know your level? You can do the quiz and found out!</h1>
 </legend>
+
 <div class="container" *ngIf="!quizOver">
     <div class="profile">
         <app-questions [questionIndex]="currentIndex" (answers)="receiveAnswers($event)" (totalQuestions)="getTotalQuestions($event)">
@@ -22,6 +24,7 @@
         <br>
         <button class="button" (click)="goPrevious()">Previous</button>
         <button class="button" (click)="goNext()">Next</button>
+        <button class="button" (click)="goBack()">Back</button>
     </div>
 
 </div>

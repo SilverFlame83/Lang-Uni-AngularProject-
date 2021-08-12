@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -14,7 +15,7 @@ export class QuizComponent implements OnInit {
   quizOver!: boolean;
   
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
    
@@ -30,6 +31,10 @@ export class QuizComponent implements OnInit {
 
   goPrevious(){
     this.currentIndex--;
+  }
+
+  goBack(){
+    this.router.navigate(['/']);
   }
   receiveAnswers(recievedAnswer: any){
     this.answers = recievedAnswer;
@@ -52,7 +57,7 @@ export class QuizComponent implements OnInit {
       alert('Your level is Begginer');
     }
     if(this.score>=5 && this.score<10){
-    alert('Well Done! Your level is Elementary. You can start from Elemntary level')
+    alert('Well Done! Your level is Elementary. You can start from Elementary level')
     }
     if(this.score>=10 && this.score<15){
       alert('Congrats! Your level is Pre-Intermediate. You can start from Pre-Intermediate')

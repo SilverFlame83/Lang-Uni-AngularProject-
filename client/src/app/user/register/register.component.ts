@@ -38,7 +38,8 @@ export class RegisterComponent implements OnDestroy {
    if(this.form.invalid){return;}
    this.userService.register(this.form.value).subscribe({
      next:()=>{
-      this.router.navigate(['/']);
+      this.router.navigate(['/'])
+      window.location.href = 'http://localhost:4200/home'
      },
     error:(err)=>{
       console.log(err);
