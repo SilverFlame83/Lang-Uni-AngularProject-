@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PlansScheduleComponent } from './plans-schedule/plans-schedule.component';
 import { TeachersComponent } from './teachers/teachers.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { AuthActivate } from './core/guards/auth.guard';
 
 
 const routes: Routes = [
@@ -27,11 +28,21 @@ const routes: Routes = [
     component: CareersComponent
   },{
     path:'quizes',
-    component: QuizComponent
+    component: QuizComponent,
+    canActivate:[AuthActivate],
+    data:{
+        authenticationRequired: true,
+        authenticationFailureRedirectUrl: '/login',
+    }
   },
   {
     path:'teachers',
-    component: TeachersComponent
+    component: TeachersComponent,
+    canActivate:[AuthActivate],
+    data:{
+      authenticationRequired: true,
+      authenticationFailureRedirectUrl: '/login',
+  }
   },
   {
     path:'**',
